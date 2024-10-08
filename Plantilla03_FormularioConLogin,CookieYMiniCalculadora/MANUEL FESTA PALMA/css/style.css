@@ -1,0 +1,159 @@
+/* Estilo global del cuerpo */
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-image: url("../img/fondo.jpg");
+  text-align: justify;
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Encabezado */
+.header {
+  background-color: rgba(210, 159, 30, 0.728);
+  text-align: center;
+  padding: 5px;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+/* Barra de navegación superior */
+.topnav {
+  overflow: hidden;
+  background-color: rgba(210, 105, 30, 0.5);
+  opacity: 0.85;
+  display: flex;
+  justify-content: space-between; /* Alinea los enlaces a la izquierda y el botón a la derecha */
+}
+.topnav a {
+  float: left;
+  display: block;
+  color: rgba(255, 250, 250, 0.9);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.topnav a:hover {
+  background-color: rgba(128, 128, 128, 0.25);
+  color: rgba(255, 215, 0, 0.75);
+}
+
+/* Contenedor para los ejercicios y otros elementos */
+.container {
+  align-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 60px;
+  flex: 1; /* Ocupa el espacio restante */
+  min-height: 60vh;
+}
+
+/* Tarjetas de ejercicios */
+.card {
+  background-color: #ffffff98;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 200px;
+  height: 150px;
+  border: 1px solid rgba(0, 0, 0, 0.986);
+  border-radius: 15px;
+  font-family: sans-serif;
+}
+
+.cardTitle {
+  font-size: 24px;
+  padding: 10px 10px 0 10px;
+}
+
+.cardBody {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardFooter {
+  margin: auto;
+  width: 170px;
+  background: rgba(2, 255, 2, 0.25);
+  border-radius: 15px;
+  padding: 10px;
+  text-align: center;
+}
+
+.cardFooter a {
+  text-decoration: none;
+  color: rgba(0, 0, 255, 0.8);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Estilos para pantallas pequeñas */
+@media screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+  }
+}
+
+/* Footer */
+.footer {
+  background-color: rgba(240, 185, 97, 0.858);
+  text-align: center;
+  padding: 20px;
+  color: rgb(0 0 0);
+}
+
+/* Estilos específicos para el formulario de login */
+.login-container {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+  margin: 50px auto; /* Centrar horizontalmente */
+}
+
+.login-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.login-container input {
+  width: 92%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.login-container button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+}
+
+.login-container button:hover {
+  background-color: #45a049;
+}
+
+#error-msg {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+
