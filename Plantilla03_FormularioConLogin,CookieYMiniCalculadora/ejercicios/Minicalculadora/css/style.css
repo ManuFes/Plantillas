@@ -1,7 +1,7 @@
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
   background-image: url("../img/fondo.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -59,13 +59,15 @@ body {
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
+  max-width: 420px;
   min-height: 350px;
   border: 1px solid rgb(211, 211, 211, 0.5);
   border-radius: 15px;
   font-family: sans-serif;
   margin: 0 auto;
-  background-color: transparent;
+  background-color: #ffffffdd;
   z-index: 1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .card::before {
@@ -90,28 +92,74 @@ body {
 }
 
 .cardBody {
-    height: max-content;
   padding: 10px;
-  flex: 1 1 100%;
   text-align: center;
 }
 
-.btn {
-  background-color: #4caf50;
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 10px 0;
-  cursor: pointer;
+/* Conversor de Bases - Estilo */
+.calc-display {
+  width: 100%;
+  font-size: 24px;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 2px solid #ccc;
   border-radius: 5px;
+  text-align: center;
+  background-color: #f9f9f9;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-.btn:hover {
-  background-color: rgba(210, 159, 30, 0.728);
+.calc-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.calc-btn {
+  padding: 15px;
+  font-size: 18px;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.calc-btn:hover {
+  background-color: #45a049;
+}
+
+.op-btn {
+  background-color: #ffa500;
+}
+
+.op-btn:hover {
+  background-color: #ff8c00;
+}
+
+.cardBody {
+  padding: 100px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.clear-btn {
+  background-color: #ff6347;
+}
+
+.clear-btn:hover {
+  background-color: #e53d2f;
+}
+
+.equal-btn {
+  background-color: #4caf50;
+}
+
+.equal-btn:hover {
+  background-color: #45a049;
 }
 
 .cardFooter {

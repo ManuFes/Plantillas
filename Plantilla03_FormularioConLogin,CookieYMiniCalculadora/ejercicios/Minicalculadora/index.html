@@ -4,18 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Javascript</title>
-    <link href="./img/favicon.ico" rel="icon" type="image/x-icon" />
-    <link href="./style.css" rel="stylesheet" type="text/css" />
-    <script defer src="./js/script.js" defer></script>
-    <script defer src="./js/funciones.js" defer></script>
+    <title>Conversor de Bases</title>
+    <link href="./css/style.css" rel="stylesheet" type="text/css" />
+    <script defer src="./js/script.js"></script>
   </head>
   <body>
     <!-- --------HEADER---------- -->
     <div class="header">
       <h3>Ejemplos – FUNDAMENTOS DE JS (ES6)</h3>
-      <h4>Desarrollo WEB en entorno cliente</h4>
-      <h5>Plantilla03a</h5>
+      <h4>Conversor de Bases Numéricas</h4>
     </div>
     <!-- ---------MENU----------- -->
     <div class="topnav">
@@ -25,15 +22,26 @@
       <a href="https://github.com/ManuFes/Plantilla03_">github</a>
     </div>
     <br />
-    <!-- ------MAIN-CONTENT------ -->
+
+    <!-- ------Conversor de Bases------ -->
     <div class="container">
       <div class="card">
-        <div class="cardTitle">Función Refactorización</div>
-        <div class="cardBody" id="cardText">
-          <button class="btn" onclick="mostrarSolucion()">Púlsame</button>
-          <p>(Aquí mostramos el resultado)</p>
+        <div class="cardTitle">Conversor de Bases Numéricas</div>
+        <div class="cardBody">
+          <!-- Input para ingresar el número -->
+          <input type="number" id="inputNumber" placeholder="Ingresa un número" class="calc-display" />
+          
+          <!-- Input para mostrar el resultado -->
+          <input type="text" id="resultDisplay" placeholder="Resultado" class="calc-display" readonly />
+          
+          <!-- Botones para la conversión -->
+          <div class="calc-buttons">
+            <button class="calc-btn" onclick="convertToBinary()">Binario</button>
+            <button class="calc-btn" onclick="convertToOctal()">Octal</button>
+            <button class="calc-btn" onclick="convertToDecimal()">Decimal</button>
+            <button class="calc-btn" onclick="convertToHex()">Hexadecimal</button>
+          </div>
         </div>
-        
       </div>
     </div>
 
