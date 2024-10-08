@@ -1,39 +1,32 @@
-// Función para convertir a binario
-function convertToBinary() {
-  const number = parseInt(document.getElementById('inputNumber').value);
-  if (!isNaN(number)) {
-    document.getElementById('resultDisplay').value = number.toString(2);
-  } else {
-    alert("Por favor, ingresa un número válido.");
-  }
+"use strict"
+
+let currentInput = "";
+let operator = "";
+
+// Función para insertar números en la pantalla
+function insertNumber(num) {
+  currentInput += num;
+  document.getElementById("calcDisplay").value = currentInput;
 }
 
-// Función para convertir a octal
-function convertToOctal() {
-  const number = parseInt(document.getElementById('inputNumber').value);
-  if (!isNaN(number)) {
-    document.getElementById('resultDisplay').value = number.toString(8);
-  } else {
-    alert("Por favor, ingresa un número válido.");
-  }
+// Función para limpiar la pantalla
+function clearCalc() {
+  currentInput = "";
+  document.getElementById("calcDisplay").value = "";
 }
 
-// Función para convertir a decimal
-function convertToDecimal() {
-  const number = parseInt(document.getElementById('inputNumber').value);
-  if (!isNaN(number)) {
-    document.getElementById('resultDisplay').value = number.toString(10);
-  } else {
-    alert("Por favor, ingresa un número válido.");
-  }
+// Función para operaciones (+, -, *, /)
+function operate(op) {
+  currentInput += ` ${op} `;
+  document.getElementById("calcDisplay").value = currentInput;
 }
 
-// Función para convertir a hexadecimal
-function convertToHex() {
-  const number = parseInt(document.getElementById('inputNumber').value);
-  if (!isNaN(number)) {
-    document.getElementById('resultDisplay').value = number.toString(16).toUpperCase();
-  } else {
-    alert("Por favor, ingresa un número válido.");
+// Función para calcular el resultado
+function calculate() {
+  try {
+    document.getElementById("calcDisplay").value = eval(currentInput);
+    currentInput = document.getElementById("calcDisplay").value;
+  } catch (e) {
+    document.getElementById("calcDisplay").value = "Error";
   }
 }

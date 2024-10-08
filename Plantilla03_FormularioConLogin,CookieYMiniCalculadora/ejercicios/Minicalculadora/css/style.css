@@ -1,13 +1,12 @@
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100dvh;
+  min-height: 100vh;
   background-image: url("../img/fondo.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  text-align: justify;
   font-family: Tahoma, Geneva, sans-serif;
   font-size: 14px;
   margin: 0;
@@ -15,112 +14,77 @@ body {
 }
 
 .header {
-  background-color: rgba(210, 159, 30, 0.728);
-  opacity: 0.75;
+  background-color: rgba(210, 159, 30, 0.9);
   text-align: center;
-  padding: 5px;
-  color: rgba(8, 8, 8, 0.9);
+  padding: 10px;
+  color: rgba(8, 8, 8, 1);
 }
 
 .topnav {
+  height: 8dvh;
   overflow: hidden;
-  background-color: rgb(210, 105, 30, 0.5);
+  background-color: rgba(210, 105, 30, 0.9);
   text-align: center;
-  opacity: 1;
 }
 
 .topnav a {
-  float: left;
-  display: block;
-  color: rgb(255, 250, 250, 0.9);
-  text-shadow: 2px 2px 4px rgb(0, 0, 0, 0.75);
-  text-align: center;
-  padding: 14px 16px;
+  font-size: large;
+  color: white;
+  padding: 10px;
   text-decoration: none;
+  text-align: center;
 }
 
 .topnav a:hover {
-  background-color: rgb(128, 128, 128, 0.25);
-  color: rgb(255, 215, 0, 0.75);
+  background-color: rgba(255, 215, 0, 0.75);
 }
 
 .container {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 16px;
-  flex: 1;
-  height: max-content;
+  align-items: center;
+  min-height: 68.6dvh; /* Centrado vertical */
 }
 
 .card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   width: 100%;
-  max-width: 420px;
-  min-height: 350px;
-  border: 1px solid rgb(211, 211, 211, 0.5);
+  max-width: 320px;
+  background-color: rgba(255, 255, 255, 0.95);
   border-radius: 15px;
-  font-family: sans-serif;
-  margin: 0 auto;
-  background-color: #ffffffdd;
-  z-index: 1;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: white;
-  opacity: 0.2;
-  border-radius: 15px;
-  z-index: -1;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .cardTitle {
   text-align: center;
-  background-color: rgba(210, 159, 30, 0.728);
-  border-radius: 15px 15px 0 0;
-  font-size: 24px;
-  padding: 10px 10px 0 10px;
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 20px;
 }
 
-.cardBody {
-  padding: 10px;
-  text-align: center;
-}
-
-/* Conversor de Bases - Estilo */
 .calc-display {
-  width: 100%;
+  width: 92%;
   font-size: 24px;
-  padding: 15px;
-  margin-bottom: 15px;
-  border: 2px solid #ccc;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
   border-radius: 5px;
-  text-align: center;
-  background-color: #f9f9f9;
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  background-color: #f1f1f1;
+  text-align: right;
 }
 
 .calc-buttons {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr); /* Mantén las 4 columnas */
   gap: 10px;
 }
 
 .calc-btn {
-  padding: 15px;
-  font-size: 18px;
-  border: none;
+  padding: 10px;
+  font-size: 16px;
   background-color: #4caf50;
   color: white;
+  border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -136,14 +100,6 @@ body {
 
 .op-btn:hover {
   background-color: #ff8c00;
-}
-
-.cardBody {
-  padding: 100px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .clear-btn {
@@ -163,9 +119,9 @@ body {
 }
 
 .cardFooter {
-  background: rgba(146, 108, 13, 0.728);
+  background: rgba(146, 108, 13, 0.9);
   border-radius: 0 0 15px 15px;
-  padding: 10px;
+  padding: 5px;
   text-align: center;
 }
 
@@ -175,17 +131,47 @@ body {
   text-shadow: 2px 2px 4px rgb(0, 0, 0, 0.25);
 }
 
-@media screen and (max-width: 600px) {
-  .container {
-    width: 100%;
+@media (max-width: 768px) {
+  .calc-display {
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  .calc-btn {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .card {
+    max-width: 280px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .calc-display {
+    font-size: 18px;
+    padding: 8px;
+  }
+
+  .calc-btn {
+    padding: 6px;
+    font-size: 12px;
+  }
+
+  .card {
+    max-width: 240px;
+    padding: 10px;
+  }
+
+  .calc-buttons {
+    grid-template-columns: repeat(2, 1fr); /* Para pantallas pequeñas, 2 columnas */
   }
 }
 
 .footer {
-  background-color: rgba(210, 159, 30, 0.728);
+  background-color: rgba(210, 159, 30, 0.9);
   border-radius: 10px;
-  filter: blur(0.3);
-  opacity: 1;
+  padding: 10px;
   text-align: center;
-  padding: 20px;
 }

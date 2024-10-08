@@ -4,42 +4,51 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Conversor de Bases</title>
+    <title>Javascript</title>
+    <link href="./img/favicon.ico" rel="icon" type="image/x-icon" />
     <link href="./css/style.css" rel="stylesheet" type="text/css" />
-    <script defer src="./js/script.js"></script>
+    <script defer src="./js/script.js" defer></script>
   </head>
   <body>
     <!-- --------HEADER---------- -->
     <div class="header">
       <h3>Ejemplos – FUNDAMENTOS DE JS (ES6)</h3>
-      <h4>Conversor de Bases Numéricas</h4>
+      <h4>Desarrollo WEB en entorno cliente</h4>
+      <h5>Plantilla03a</h5>
     </div>
     <!-- ---------MENU----------- -->
     <div class="topnav">
       <a href="https://www.w3schools.com/js/default.asp">w3schools</a>
       <a href="https://es.javascript.info/js">javascript.info</a>
       <a href="https://developer.mozilla.org/es/docs/Web/JavaScript">MDN</a>
-      <a href="https://github.com/ManuFes/Plantilla03_">github</a>
+      <a href="https://github.com/ManuFes/Plantillas/tree/main/Plantilla03_FormularioConLogin%2CCookieYMiniCalculadora">github</a>
     </div>
     <br />
-
-    <!-- ------Conversor de Bases------ -->
+    <!-- ------MAIN-CONTENT------ -->
     <div class="container">
+      <!-- Mini calculadora -->
       <div class="card">
-        <div class="cardTitle">Conversor de Bases Numéricas</div>
+        <div class="cardTitle">Mini Calculadora</div>
         <div class="cardBody">
-          <!-- Input para ingresar el número -->
-          <input type="number" id="inputNumber" placeholder="Ingresa un número" class="calc-display" />
-          
-          <!-- Input para mostrar el resultado -->
-          <input type="text" id="resultDisplay" placeholder="Resultado" class="calc-display" readonly />
-          
-          <!-- Botones para la conversión -->
+          <input type="text" id="calcDisplay" readonly class="calc-display" />
+          <br />
           <div class="calc-buttons">
-            <button class="calc-btn" onclick="convertToBinary()">Binario</button>
-            <button class="calc-btn" onclick="convertToOctal()">Octal</button>
-            <button class="calc-btn" onclick="convertToDecimal()">Decimal</button>
-            <button class="calc-btn" onclick="convertToHex()">Hexadecimal</button>
+            <button class="calc-btn" onclick="insertNumber('1')">1</button>
+            <button class="calc-btn" onclick="insertNumber('2')">2</button>
+            <button class="calc-btn" onclick="insertNumber('3')">3</button>
+            <button class="calc-btn op-btn" onclick="operate('+')">+</button>
+            <button class="calc-btn" onclick="insertNumber('4')">4</button>
+            <button class="calc-btn" onclick="insertNumber('5')">5</button>
+            <button class="calc-btn" onclick="insertNumber('6')">6</button>
+            <button class="calc-btn op-btn" onclick="operate('-')">-</button>
+            <button class="calc-btn" onclick="insertNumber('7')">7</button>
+            <button class="calc-btn" onclick="insertNumber('8')">8</button>
+            <button class="calc-btn" onclick="insertNumber('9')">9</button>
+            <button class="calc-btn op-btn" onclick="operate('*')">*</button>
+            <button class="calc-btn clear-btn" onclick="clearCalc()">C</button>
+            <button class="calc-btn" onclick="insertNumber('0')">0</button>
+            <button class="calc-btn equal-btn" onclick="calculate()">=</button>
+            <button class="calc-btn op-btn" onclick="operate('/')">/</button>
           </div>
         </div>
       </div>
