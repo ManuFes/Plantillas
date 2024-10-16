@@ -6,6 +6,7 @@ window.onload = function() {
     const logoutTopRight = document.getElementById('logoutTopRight'); // Selección del botón de logout en la barra de navegación
     const errorMessage = document.getElementById('error-msg');
     const number = document.getElementById('dropdownTools');
+    const strings = document.getElementById('dropdownStrings'); // Selección del nuevo botón
 
     // Comprobar si el usuario ya ha iniciado sesión anteriormente
     if (getCookie('loggedIn') === 'true') {
@@ -33,14 +34,16 @@ window.onload = function() {
         loginContainer.style.display = 'none'; // Ocultar el contenedor de login
         ejerciciosContainer.style.display = 'flex'; // Mostrar el contenedor de los ejercicios
         logoutTopRight.style.display = 'block'; // Mostrar el botón de logout en la barra de navegación
-        number.style.display = 'block'; 
+        number.style.display = 'block'; // Mostrar el botón "Number"
+        strings.style.display = 'block'; // Mostrar el nuevo botón "Strings"
     }
 
     // Manejar el evento de logout
     logoutTopRight.onclick = function() {
         setCookie('loggedIn', '', -1); // Eliminar la cookie de sesión
         location.reload(); // Recargar la página para volver al estado inicial
-        number.style.display = 'none';
+        number.style.display = 'none'; // Ocultar el botón "Number"
+        strings.style.display = 'none'; // Ocultar el botón "Strings"
     };
 
     // Función para mostrar mensajes de error

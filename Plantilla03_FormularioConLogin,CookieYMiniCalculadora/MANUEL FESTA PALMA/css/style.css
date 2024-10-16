@@ -6,7 +6,7 @@ body {
   background-image: url("../img/fondo.jpg");
   text-align: justify;
   font-family: Tahoma, Geneva, sans-serif;
-  font-size: 14px;
+  font-size: 18px;
   margin: 0;
   padding: 0;
 }
@@ -15,10 +15,17 @@ body {
 .header {
   background-color: rgba(210, 159, 30, 0.728);
   text-align: center;
+  height: 150px;
   padding: 5px;
   color: rgba(0, 0, 0, 0.9);
 }
-
+.header-image {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 100px; /* Adjust size as needed */
+  height: auto;
+}
 /* Barra de navegación superior */
 .topnav {
   overflow: hidden;
@@ -26,7 +33,10 @@ body {
   opacity: 0.85;
   display: flex;
   justify-content: space-between; /* Alinea los enlaces a la izquierda y el botón a la derecha */
+  display: flex;
+  justify-content: space-between; /* Alinea los enlaces a la izquierda y el botón a la derecha */
 }
+
 .topnav a {
   float: left;
   display: block;
@@ -41,8 +51,62 @@ body {
   color: rgba(255, 215, 0, 0.75);
 }
 
+/* Estilos para el menú desplegable en la barra de navegación */
+.dropdown {
+  float: left;
+  overflow: hidden;
+  display: none;
+  
+}
+
+.dropdown .dropbtn {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
+  font-size: 18px;
+  color: rgba(255, 250, 250, 0.9);
+  font-family: Tahoma, Geneva, sans-serif;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(210, 105, 30, 0.8);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: rgba(128, 128, 128, 0.5);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: rgba(128, 128, 128, 0.25);
+}
+
+
 /* Contenedor para los ejercicios y otros elementos */
 .container {
+  background-image: url("../img/fondo.jpg");
   align-items: center;
   display: flex;
   align-items: center;
@@ -61,7 +125,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   width: 200px;
-  height: 150px;
+  height: 165px;
   border: 1px solid rgba(0, 0, 0, 0.986);
   border-radius: 15px;
   font-family: sans-serif;
@@ -106,6 +170,12 @@ body {
   background-color: rgba(240, 185, 97, 0.858);
   text-align: center;
   padding: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   color: rgb(0 0 0);
 }
 
@@ -156,4 +226,37 @@ body {
   margin-top: 10px;
 }
 
+/* Botón de logout en la barra de navegación */
+#logoutTopRight {
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  padding: 14px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 10px; /* Para que no esté pegado al borde derecho */
+}
 
+#logoutTopRight:hover {
+  background-color: #e53d2f;
+}
+
+#logoutTopRight {
+  display: none; /* Inicialmente oculto */
+}
+
+#logoutButton {
+  display: none;
+  margin-top: 20px;
+  background-color: #ff6347;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#logoutButton:hover {
+  background-color: #e53d2f;
+}

@@ -38,6 +38,7 @@ body {
   }
   
   .container {
+    background-image: url("../../../img/fondo.jpg");
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,7 +62,7 @@ body {
   }
   
   .calc-display {
-    width: 100%;
+    width: 93%;
     font-size: 24px;
     padding: 12px;
     margin-bottom: 10px;
