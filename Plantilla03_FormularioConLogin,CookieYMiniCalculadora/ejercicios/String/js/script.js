@@ -1,5 +1,8 @@
 "use strict";
 
+let intervalId;
+let intervalSpeed = 1000; // Velocidad inicial (1 segundo)
+
 // Función para convertir todo el texto a mayúsculas
 function toUppercase() {
   const text = document.getElementById("textInput").value;
@@ -57,4 +60,63 @@ function consonantsLowercase() {
 // Función para limpiar el textarea
 function clearText() {
   document.getElementById("textInput").value = "";
+}
+
+// Función para aplicar transformaciones aleatorias
+function randomTransformation() {
+  const transformations = [
+    toUppercase,
+    toLowercase,
+    capitalizeWords,
+    lastLetterUpper,
+    firstLetterLower,
+    vowelsUppercase,
+    consonantsLowercase
+  ];
+  const randomIndex = Math.floor(Math.random() * transformations.length);
+  transformations[randomIndex]();
+}
+
+// Iniciar transformaciones aleatorias en intervalos de tiempo
+function startRandomTransformation() {
+  stopRandomTransformation(); // Detenemos cualquier intervalo anterior
+  intervalId = setInterval(randomTransformation, intervalSpeed);
+}
+
+// Detener las transformaciones aleatorias
+function stopRandomTransformation() {
+  if (intervalId) {
+    clearInterval(intervalId);
+    intervalId = null;
+  }
+}
+
+// Aumentar la velocidad de las transformaciones aleatorias
+function increaseSpeed() {
+  if (intervalSpeed > 200) { // Limite de velocidad mínima
+    intervalSpeed -= 200; // Aumentamos la velocidad disminuyendo el tiempo entre ejecuciones
+    if (intervalId) {
+      startRandomTransformation(); // Reiniciar con la nueva velocidad
+    }
+  }
+}
+
+// Disminuir la velocidad de las transformaciones aleatorias
+function decreaseSpeed() {
+  intervalSpeed += 200; // Disminuimos la velocidad aumentando el tiempo entre ejecuciones
+  if (intervalId) {
+    startRandomTransformation(); // Reiniciar con la nueva velocidad
+  }
+}
+
+// Función para obtener una frase de Chuck Norris y mostrarla en el textarea
+async function getChuckNorrisJoke() {
+  try {
+    const response = await fetch('https://api.chucknorris.io/jokes/random');
+    const data = await response.json();
+    document.getElementById('textInput').value = data.value;
+  } catch (error) {
+    console.error('Error al obtener la frase de Chuck Norris:', error);
+    document.getElementById('textInput').value = "No se pudo obtener una frase de Chuck Norris.";
+  }
 }

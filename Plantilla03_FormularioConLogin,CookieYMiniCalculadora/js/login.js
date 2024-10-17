@@ -1,15 +1,15 @@
+"use strick"
 window.onload = function() {
     const loginForm = document.getElementById('loginForm');
     const loginContainer = document.getElementById('loginContainer');
     const ejerciciosContainer = document.getElementById('ejerciciosContainer');
-    const logoutButton = document.getElementById('logoutButton');
-    const logoutTopRight = document.getElementById('logoutTopRight'); // Selección del botón de logout en la barra de navegación
+    const logoutTopRight = document.getElementById('logoutTopRight'); // Botón de logout en la barra de navegación
     const errorMessage = document.getElementById('error-msg');
     const number = document.getElementById('dropdownTools');
-    const strings = document.getElementById('dropdownStrings'); // Selección del nuevo botón
+    const strings = document.getElementById('dropdownStrings');
 
-    // Comprobar si el usuario ya ha iniciado sesión anteriormente
-    if (getCookie('loggedIn') === 'true') {
+    // Comprobar si el usuario ya ha iniciado sesión anteriormente usando sessionStorage
+    if (sessionStorage.getItem('loggedIn') === 'true') {
         displayExercises(); // Si ya ha iniciado sesión, mostrar los ejercicios
     }
 
@@ -22,7 +22,7 @@ window.onload = function() {
 
         // Validación simple de credenciales
         if (username === "manu" && password === "1234") {
-            setCookie('loggedIn', 'true', 1); // Guardar la cookie de sesión
+            sessionStorage.setItem('loggedIn', 'true'); // Guardar el estado de sesión
             displayExercises(); // Mostrar los ejercicios
         } else {
             displayErrorMessage("Nombre de usuario o contraseña incorrectos."); // Mostrar error
@@ -33,14 +33,14 @@ window.onload = function() {
     function displayExercises() {
         loginContainer.style.display = 'none'; // Ocultar el contenedor de login
         ejerciciosContainer.style.display = 'flex'; // Mostrar el contenedor de los ejercicios
-        logoutTopRight.style.display = 'block'; // Mostrar el botón de logout en la barra de navegación
+        logoutTopRight.style.display = 'block'; // Mostrar el botón de logout
         number.style.display = 'block'; // Mostrar el botón "Number"
-        strings.style.display = 'block'; // Mostrar el nuevo botón "Strings"
+        strings.style.display = 'block'; // Mostrar el botón "Strings"
     }
 
     // Manejar el evento de logout
     logoutTopRight.onclick = function() {
-        setCookie('loggedIn', '', -1); // Eliminar la cookie de sesión
+        sessionStorage.removeItem('loggedIn'); // Eliminar el estado de sesión
         location.reload(); // Recargar la página para volver al estado inicial
         number.style.display = 'none'; // Ocultar el botón "Number"
         strings.style.display = 'none'; // Ocultar el botón "Strings"
@@ -50,27 +50,5 @@ window.onload = function() {
     function displayErrorMessage(message) {
         errorMessage.textContent = message;
         errorMessage.style.display = 'block'; // Mostrar el mensaje de error
-    }
-
-    // Función para establecer cookies
-    function setCookie(name, value, days) {
-        const date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        const expires = "expires=" + date.toUTCString();
-        document.cookie = name + "=" + value + ";" + expires + ";path=/";
-    }
-
-    // Función para obtener el valor de una cookie
-    function getCookie(name) {
-        const cname = name + "=";
-        const decodedCookie = decodeURIComponent(document.cookie);
-        const cookieArray = decodedCookie.split(';');
-        for (let i = 0; i < cookieArray.length; i++) {
-            let cookie = cookieArray[i].trim();
-            if (cookie.indexOf(cname) === 0) {
-                return cookie.substring(cname.length, cookie.length);
-            }
-        }
-        return ""; // Si no se encuentra la cookie, devolver cadena vacía
     }
 };
