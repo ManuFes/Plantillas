@@ -7,7 +7,7 @@
     <title>Javascript</title>
     <link href="./img/favicon.ico" rel="icon" type="image/x-icon" />
     <link href="./css/style.css" rel="stylesheet" type="text/css" />
-    <script defer src="./js/script.js" defer></script>
+    <script defer src="./js/script.js"></script>
   </head>
   <body>
     <!-- --------HEADER---------- -->
@@ -16,6 +16,7 @@
       <h4>Desarrollo WEB en entorno cliente</h4>
       <h5>Plantilla03a</h5>
     </div>
+
     <!-- ---------MENU----------- -->
     <div class="topnav">
       <a href="https://www.w3schools.com/js/default.asp">w3schools</a>
@@ -27,57 +28,80 @@
       >
     </div>
     <br />
+
     <!-- ------MAIN-CONTENT------ -->
     <div class="container">
       <!-- Conversor de Texto -->
-      <div class="card">
-        <div class="cardTitle">Conversor de Texto</div>
-        <div class="cardBody">
-          <textarea
-            id="textInput"
-            class="calc-display"
-            placeholder="Introduce texto aquí"
-          ></textarea>
-          <br />
-          <div class="text-buttons">
-            <button class="calc-btn" onclick="toUppercase()">Mayúsculas</button>
-            <button class="calc-btn" onclick="toLowercase()">Minúsculas</button>
-            <button class="calc-btn" onclick="capitalizeWords()">
-              Capitalizar Palabras
-            </button>
-            <button class="calc-btn" onclick="lastLetterUpper()">
-              Última Letra Mayúscula
-            </button>
-            <button class="calc-btn" onclick="firstLetterLower()">
-              Primera Minúscula
-            </button>
-            <button class="calc-btn" onclick="vowelsUppercase()">
-              Vocales Mayúsculas
-            </button>
-            <button class="calc-btn" onclick="consonantsLowercase()">
-              Consonantes Minúsculas
-            </button>
-            <button class="calc-btn" onclick="startRandomTransformation()">
-              Iniciar Aleatorio
-            </button>
-            <button class="calc-btn" onclick="stopRandomTransformation()">
-              Detener Aleatorio
-            </button>
-            <button class="calc-btn" onclick="increaseSpeed()">
-              Aumentar Velocidad
-            </button>
-            <button class="calc-btn" onclick="decreaseSpeed()">
-              Disminuir Velocidad
-            </button>
-            <button class="calc-btn" onclick="getChuckNorrisJoke()">
-              Frase de Chuck Norris
-            </button>
-            <!-- Nuevo botón -->
-            <button class="clear-btn" onclick="clearText()">Limpiar</button>
+      <div class="container">
+        <div class="card">
+          <div class="cardTitle">Conversor de Texto</div>
+          <div class="cardBody">
+            <textarea
+              id="textInput"
+              class="calc-display"
+              placeholder="Introduce texto aquí"
+            ></textarea>
+            <br />
+            <div class="text-buttons">
+              <button class="calc-btn" onclick="toUppercase()">
+                Mayúsculas
+              </button>
+              <button class="calc-btn" onclick="toLowercase()">
+                Minúsculas
+              </button>
+              <button class="calc-btn" onclick="capitalizeWords()">
+                Capitalizar Palabras
+              </button>
+              <button class="calc-btn" onclick="lastLetterUpper()">
+                Última Letra Mayúscula
+              </button>
+              <button class="calc-btn" onclick="vowelsUppercase()">
+                Vocales Mayúsculas
+              </button>
+              <button class="calc-btn" onclick="consonantsLowercase()">
+                Consonantes Minúsculas
+              </button>
+              <!-- Interruptor On/Off para transformaciones aleatorias -->
+              <div class="toggle-container">
+                <input
+                  type="checkbox"
+                  id="toggleSwitch"
+                  class="toggle-switch"
+                  onclick="toggleRandom()"
+                />
+                <label for="toggleSwitch" class="toggle-label">
+                  <span class="toggle-text on-text">ON</span>
+                  <span class="toggle-text off-text">OFF</span>
+                  <span class="toggle-ball"></span>
+                </label>
+              </div>
+              <!-- Control de Velocidad -->
+              <div class="speed-control">
+                <label for="speedRange">Velocidad:</label>
+                <input
+                  type="range"
+                  id="speedRange"
+                  min="100"
+                  max="10000"
+                  step="100"
+                  value="1000"
+                  oninput="updateSpeed(this.value)"
+                />
+                <span id="speedValue">1000 ms</span>
+              </div>
+              <button class="calc-btn" onclick="getChuckNorrisJoke()">
+                Frase de Chuck Norris
+              </button>
+
+
+
+              <button class="clear-btn" onclick="clearText()">Limpiar</button>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
     <br />
     <!-- ---------FOOT----------- -->
     <div class="footer">Manuel Festa Palma</div>

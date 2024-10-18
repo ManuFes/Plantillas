@@ -2,6 +2,7 @@
 
 let intervalId;
 let intervalSpeed = 1000; // Velocidad inicial (1 segundo)
+let randomActive = false; // Estado inicial de las transformaciones aleatorias
 
 // Función para convertir todo el texto a mayúsculas
 function toUppercase() {
@@ -57,6 +58,15 @@ function consonantsLowercase() {
   });
 }
 
+// Función para convertir solo el primer carácter en mayúsculas
+function firstCharUpperCase() {
+  const text = document.getElementById("textInput").value;
+
+  if (text.length > 0) {
+    document.getElementById("textInput").value = text.charAt(0).toUpperCase() + text.slice(1);
+  }
+}
+
 // Función para limpiar el textarea
 function clearText() {
   document.getElementById("textInput").value = "";
@@ -91,21 +101,27 @@ function stopRandomTransformation() {
   }
 }
 
-// Aumentar la velocidad de las transformaciones aleatorias
-function increaseSpeed() {
-  if (intervalSpeed > 200) { // Limite de velocidad mínima
-    intervalSpeed -= 200; // Aumentamos la velocidad disminuyendo el tiempo entre ejecuciones
-    if (intervalId) {
-      startRandomTransformation(); // Reiniciar con la nueva velocidad
-    }
+// Función para actualizar la velocidad basada en el valor del slider
+function updateSpeed(value) {
+  intervalSpeed = value; // Actualiza la velocidad
+  document.getElementById('speedValue').textContent = value + " ms"; // Actualiza el texto visible de la velocidad
+  if (randomActive) {
+    startRandomTransformation(); // Reinicia las transformaciones aleatorias con la nueva velocidad si están activas
   }
 }
 
-// Disminuir la velocidad de las transformaciones aleatorias
-function decreaseSpeed() {
-  intervalSpeed += 200; // Disminuimos la velocidad aumentando el tiempo entre ejecuciones
-  if (intervalId) {
-    startRandomTransformation(); // Reiniciar con la nueva velocidad
+// Función para alternar el estado de las transformaciones aleatorias (On/Off) con un toggle switch
+function toggleRandom() {
+  const toggleBtn = document.getElementById("toggleSwitch");
+
+  if (toggleBtn.checked) {
+    // Si está encendido (ON)
+    startRandomTransformation();
+    randomActive = true;
+  } else {
+    // Si está apagado (OFF)
+    stopRandomTransformation();
+    randomActive = false;
   }
 }
 
