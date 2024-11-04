@@ -1,0 +1,203 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-image: url("../img/fondo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.header {
+  background-color: rgba(32, 58, 67, 0.85);
+  text-align: center;
+  padding: 15px;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.topnav {
+  height: 8dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(58, 71, 80, 0.9);
+}
+
+.topnav a {
+  font-size: large;
+  color: #ffffff;
+  padding: 10px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.topnav a:hover {
+  background-color: rgba(255, 215, 0, 0.75);
+  border-radius: 5px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.card {
+  width: 100%;
+  max-width: 600px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.cardTitle {
+  font-size: 22px;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.card button {
+  display: inline-block;
+  background-color: #4a90e2;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  margin: 10px 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.card button:hover {
+  background-color: #357ab7;
+}
+
+.card button:active {
+  transform: scale(0.95);
+}
+
+.card button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.matrix-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  gap: 15px;
+}
+
+.matrix-container table {
+  border-collapse: collapse;
+  margin: 10px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.matrix-container td {
+  border: 1px solid #4a4a4a;
+  padding: 15px;
+  text-align: center;
+  width: 60px;
+  height: 60px;
+  font-size: 1.2em;
+  background-color: #f7f7f7;
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+.matrix-container td:hover {
+  background-color: #e3f2fd;
+}
+
+.matrix-container h5 {
+  margin: 10px 0;
+  font-size: 1.2em;
+  color: #333;
+  text-align: center;
+  font-weight: 500;
+}
+
+.result-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.result-container h5 {
+  margin-bottom: 10px;
+  font-size: 1.3em;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+/* Opcional: Diferentes colores para matrices A, B y Resultado */
+.matrix-container .matrix-a td {
+  background-color: #e3f3e3;
+}
+
+.matrix-container .matrix-b td {
+  background-color: #f3e3e3;
+}
+
+.matrix-container .result-matrix td {
+  background-color: #e3eaf3;
+}
+
+.footer {
+  background-color: rgba(32, 58, 67, 0.85);
+  padding: 15px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.footer p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .matrix-container td {
+    width: 45px;
+    height: 45px;
+    font-size: 1em;
+  }
+
+  .card {
+    max-width: 360px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .matrix-container td {
+    width: 40px;
+    height: 40px;
+    font-size: 0.9em;
+  }
+
+  .card {
+    max-width: 280px;
+    padding: 15px;
+  }
+
+  .topnav a {
+    font-size: medium;
+    padding: 8px;
+  }
+}

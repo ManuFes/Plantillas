@@ -1,0 +1,12 @@
+/* Contenedor para los ejercicios y otros elementos */
+.container {
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 60px;
+    flex: 1;
+    min-height: 60vh;
+  }
+  

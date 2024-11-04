@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operaciones con Matrices</title>
+    <link href="./img/favicon.ico" rel="icon" type="image/x-icon" />
+    <link href="./css/style.css" rel="stylesheet" type="text/css" />
+    <script defer src="./js/script.js"></script>
+</head>
+<body>
+    <div class="header">
+        <h3>Operaciones con Matrices – FUNDAMENTOS DE JS (ES6)</h3>
+    </div>
+    <div class="container">
+        <!-- Configuración de la matriz -->
+        <div class="card">
+            <h4>Generar Matrices Cuadradas</h4>
+            <label for="matrixSize">Tamaño de la matriz (NxN):</label>
+            <input type="number" id="matrixSize" min="1" required />
+            <br>
+            <label for="minValue">Valor mínimo:</label>
+            <input type="number" id="minValue" required />
+            <br>
+            <label for="maxValue">Valor máximo:</label>
+            <input type="number" id="maxValue" required />
+            
+            <button onclick="generateMatrices()">Generar Matrices</button>
+            
+            <!-- Opciones de operación -->
+            <h4>Operaciones</h4>
+            <button onclick="addMatrices()">Sumar</button>
+            <button onclick="subtractMatrices()">Restar</button>
+            <button onclick="multiplyMatrices()">Multiplicar</button>
+        </div>
+        
+        <!-- Contenedor para las matrices generadas y el resultado -->
+        <div id="matricesContainer" class="matrix-container"></div>
+    </div>
+</body>
+</html>

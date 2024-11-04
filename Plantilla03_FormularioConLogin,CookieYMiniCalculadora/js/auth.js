@@ -1,5 +1,5 @@
 "use strict";
-import { displayExercises } from './ui.js'; // Importamos displayExercises desde ui.js
+import { displayExercises, displayErrorMessage } from './ui.js'; // Importamos displayErrorMessage
 
 // Manejo del inicio de sesión
 export function handleLogin(event) {

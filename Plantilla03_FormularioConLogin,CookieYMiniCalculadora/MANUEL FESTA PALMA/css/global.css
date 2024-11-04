@@ -1,0 +1,13 @@
+/* Estilo global del cuerpo */
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url("../img/fondo.jpg");
+    text-align: justify;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+  }
+  
