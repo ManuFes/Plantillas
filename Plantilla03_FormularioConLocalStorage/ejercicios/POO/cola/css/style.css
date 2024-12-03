@@ -1,0 +1,154 @@
+/* Estilos generales aplicados a la página */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url("../../../../img/fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Encabezado de la página */
+  .header {
+    background-color: rgba(210, 159, 30, 0.9);
+    text-align: center;
+    padding: 10px;
+    color: rgba(8, 8, 8, 1);
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  /* Contenedor principal */
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 68.6dvh;
+  }
+  
+  /* Estilos para las tarjetas de contenido */
+  .card {
+    width: 100%;
+    max-width: 320px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  /* Título de las tarjetas */
+  .cardTitle {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  /* Estilo para los botones */
+  .calc-btn {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .calc-btn:hover {
+    background-color: #45a049;
+  }
+  
+  .calc-btn:active {
+    transform: scale(0.95);
+  }
+  
+  /* Contenedor visual de la cola */
+.queue-visual-container {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px; /* Anchura máxima */
+  height: auto; /* Ajuste dinámico de altura */
+  display: flex;
+  flex-direction: column; /* Apilar elementos verticalmente */
+  align-items: flex-start; /* Alinear los elementos a la izquierda */
+  overflow: hidden; /* Ocultar desbordamiento */
+}
+
+/* Elementos individuales de la cola */
+.queue-visual-container div {
+  background-color: rgba(210, 159, 30, 0.1);
+  padding: 10px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+  width: calc(100% - 20px); /* Margen interno */
+  margin: 5px 0;
+  transition: background-color 0.3s ease;
+}
+
+.queue-visual-container div:hover {
+  background-color: rgba(210, 159, 30, 0.25);
+}
+
+
+  
+  /* Pie de página */
+  .footer {
+    background-color: rgba(210, 159, 30, 0.9);
+    text-align: center;
+    padding: 10px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  /* Ajustes para dispositivos pequeños */
+  @media (max-width: 768px) {
+    .card {
+      max-width: 280px;
+      padding: 15px;
+    }
+  
+    .calc-btn {
+      padding: 8px;
+      font-size: 14px;
+    }
+  
+    #queueContainer div {
+      font-size: 12px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .card {
+      max-width: 240px;
+      padding: 10px;
+    }
+  
+    .calc-btn {
+      padding: 6px;
+      font-size: 12px;
+    }
+  
+    #queueContainer div {
+      font-size: 10px;
+      padding: 8px;
+    }
+  }
+  

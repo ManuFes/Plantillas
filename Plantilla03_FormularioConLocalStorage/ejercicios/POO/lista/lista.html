@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operaciones con Listas</title>
+    <link href="./css/style.css" rel="stylesheet" type="text/css" />
+    <script defer src="./js/script.js"></script>
+</head>
+<body>
+    <div class="header">
+        <h3>Operaciones con Listas – FUNDAMENTOS DE JS (ES6)</h3>
+    </div>
+    <div class="container">
+        <div class="card">
+            <h4 class="cardTitle">Gestión de la Lista</h4>
+            <label for="listValue">Valor a insertar:</label>
+            <input type="text" id="listValue" required />
+            <br>
+            <label for="listPosition">Posición (inicia en 1):</label>
+            <input type="number" id="listPosition" min="1" required />
+            <br>
+            <button class="calc-btn" onclick="addToList()">Añadir</button>
+            <button class="calc-btn" onclick="removeFromList()">Eliminar</button>
+            <button class="calc-btn" onclick="accessList()">Acceder</button>
+            <button class="calc-btn" onclick="loadFromDatabase()">Cargar desde Base de Datos</button>
+        </div>
+    </div>
+
+    <!-- Contenedor visual de la lista -->
+    <div class="container">
+        <div id="listContainer" class="list-visual-container"></div>
+    </div>
+</body>
+</html>

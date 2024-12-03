@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javascript en la página</title>
+  <link href="./css/styles.css" rel="stylesheet" type="text/css" />
+  <script defer type="text/javascript" src="./js/solicitar.js"></script>
+  <script defer type="text/javascript" src="./js/mostrar.js"></script>
+  <script defer type="text/javascript" src="./js/mayusculas.js"></script>
+  <script defer type="text/javascript" src="./js/minusculas.js"></script>
+  <script defer type="text/javascript" src="./js/aleatorio.js"></script>
+  <script defer type="text/javascript" src="./js/repetir.js"></script>
+  <script defer type="text/javascript" src="./js/script.js"></script>
+</head>
+
+<body>
+  <!-- --------HEADER---------- -->
+  <div class="header">
+    <h3>Ejemplos – FUNDAMENTOS DE JS (ES6)</h3>
+    <h4>Desarrollo WEB en entorno cliente</h4>
+    <h5>Login + localStorage + STRING</h5>
+  </div>
+  <!-- ---------MENU----------- -->
+  <div id="topnav">
+    <a href="https://www.w3schools.com/js/default.asp">w3schools</a>
+    <a href="https://es.javascript.info/js">javascript.info</a>
+    <a href="https://developer.mozilla.org/es/docs/Web/JavaScript">MDN</a>
+    <a href="https://github.com/jgarmay674/Plantilla03.git">GitHub</a>
+  </div>
+  <br />
+  <!-- ------MAIN-CONTENT------ -->
+  <div class="container">
+    <div class="card">
+      <div class="cardTitle">Modificar texto - API (weatherbit - rapidapi)</div>
+      <div class="cardBody">
+        <form action="">
+          <fieldset>
+            <legend>Escribe un texto:</legend>
+            <textarea id="texto" placeholder="Escribe un texto" rows="4" cols="75"></textarea><br><br>
+            <label for="ciudad">Ciudad:</label>
+            <select id="ciudad">
+              <option value="">Seleccione una ciudad</option>
+              <option value="Madrid" data-lat="40.4165" data-lon="-3.70256">Madrid</option>
+              <option value="Malaga" data-lat="36.72016" data-lon="-4.42034">Málaga</option>
+            </select>
+            <input id="cargar" type="button" value="Cargar texto">&nbsp;&nbsp;
+            </br></br>
+            <input id="mayusculas" type="button" value="A-Z">&nbsp;&nbsp;
+            <input id="minusculas" type="button" value="a-z">&nbsp;&nbsp;
+            <input id="primeraMay" type="button" value="A_">&nbsp;&nbsp;
+            <input id="ultimaMay" type="button" value="_Z">&nbsp;&nbsp;
+            <input id="primeraMin" type="button" value="a_">&nbsp;&nbsp;
+            <input id="ultimaMin" type="button" value="_z">&nbsp;&nbsp;
+            <input id="vocalesMay" type="button" value="AEOIU">&nbsp;&nbsp;
+            <input id="vocalesMin" type="button" value="aeiou">&nbsp;&nbsp;
+            <input id="consonantesMay" type="button" value="ABC">&nbsp;&nbsp;
+            <input id="consonantesMin" type="button" value="abc">&nbsp;&nbsp;
+            </br></br>
+            <input id="aleatorio" type="button" value="Aleatorio">&nbsp;&nbsp;
+            <input id="parar" type="button" value="Parar">&nbsp;&nbsp;
+            <input id="rapido" type="button" value="Rápido">&nbsp;&nbsp;
+            <input id="lento" type="button" value="Lento">
+          </fieldset>
+        </form>
+        <p><span id="texto"></span><strong id="resultado"></strong></p>
+      </div>
+      <div class="cardFooter"><a href="../../index.html">&gt;&gt; Página principal</a></div>
+    </div>
+  </div>
+  <br />
+  <!-- ---------FOOT----------- -->
+  <div class="footer">
+    © Luis José Sánchez & José García (jota) ☺
+  </div>
+</body>

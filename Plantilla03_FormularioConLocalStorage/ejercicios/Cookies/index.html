@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Ejemplos de fundamentos de JavaScript ES6 y desarrollo web." />
+    <title>3 CRUDs con Persistencia en Cookie, Storage e IndexedDB</title>
+    <link rel="icon" href="../../img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/card.css" />
+    <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/login.css" />
+    <link rel="stylesheet" href="./css/register.css" />
+    <link rel="stylesheet" href="./css/nav.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <script defer type="module" src="./js/main.js"></script>
+</head>
+<body>
+    <header class="header">
+        <h1>Ejemplos - FUNDAMENTOS DE JS (ES6)</h1>
+        <h4>Desarrollo WEB en entorno cliente</h4>
+        <img src="../../img/Yo.jpg" alt="Header Image" class="header-image" />
+    </header>
+
+    <main>
+        
+        <!-- Sección CRUD con persistencia en cookies, Storage e IndexedDB -->
+        <section class="crud-container">
+            <h2>Gestión de Datos - Cookies, Storage e IndexedDB</h2>
+
+            <!-- Botones para cargar datos desde la API -->
+            <button id="loadSingleData">+1 desde API</button>
+            <button id="loadMultipleData">+5 desde API</button>
+
+            <!-- Formulario para añadir datos -->
+            <form id="crudForm">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" required />
+
+                <label for="value">Valor (Cookie):</label>
+                <input type="text" id="value" required />
+
+
+                <button type="submit">Guardar</button>
+            </form>
+
+            <!-- Tabla para mostrar datos -->
+            <table id="dataTable">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Valor</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Aquí se mostrarán los datos -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Contenedor de los ejercicios, inicialmente oculto -->
+        <div class="container" id="ejerciciosContainer" style="display: none">
+            <div class="card" id="ejercicio1">
+                <div class="cardTitle">Ejercicio 1</div>
+                <div class="cardBody">
+                    <p>Refactorización</p>
+                </div>
+                <div class="cardFooter">
+                    <a href="./ejercicios/ejercicio01/index.html">&gt;&gt; Solución</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

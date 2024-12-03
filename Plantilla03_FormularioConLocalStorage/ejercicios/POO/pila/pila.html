@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operaciones con Pilas</title>
+    <link href="../../../img/favicon.ico" rel="icon" type="image/x-icon" />
+    <link href="./css/style.css" rel="stylesheet" type="text/css" />
+    <script defer src="./js/script.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <h3>Operaciones con Pilas – FUNDAMENTOS DE JS (ES6)</h3>
+    </div>
+
+    <!-- Contenedor principal -->
+    <div class="container">
+        <div class="card">
+            <h4 class="cardTitle">Gestión de la Pila</h4>
+            <label for="stackValue">Valor a insertar:</label>
+            <input type="text" id="stackValue" required />
+            <br>
+            <button class="calc-btn" onclick="pushToStack()">Apilar</button>
+            <button class="calc-btn" onclick="popFromStack()">Desapilar</button>
+            <button class="calc-btn" onclick="peekStack()">Ojear</button>
+            <button class="calc-btn" onclick="loadFromDatabase()">Cargar desde Base de Datos</button>
+        </div>
+        
+        <!-- Contenedor dinámico de la pila -->
+        <div id="stackVisualContainer" class="stack-visual-container"></div>
+    </div>
+</body>
+</html>

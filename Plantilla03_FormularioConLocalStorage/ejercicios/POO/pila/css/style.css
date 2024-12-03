@@ -1,0 +1,114 @@
+/* Estilos generales aplicados a la página */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centrar verticalmente */
+  align-items: center; /* Centrar horizontalmente */
+  min-height: 100vh; /* Ocupa toda la ventana */
+  margin: 0;
+  padding: 0;
+  background-image: url("../../../../img/fondo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 14px;
+}
+
+/* Encabezado de la página */
+.header {
+  background-color: rgba(210, 159, 30, 0.9);
+  text-align: center;
+  padding: 10px;
+  color: rgba(8, 8, 8, 1);
+  font-size: 24px;
+  font-weight: bold;
+  width: 100%;
+}
+
+/* Contenedor principal */
+.container {
+  display: flex;
+  flex-direction: column; /* Apilar tarjeta y contenedor de pila */
+  justify-content: center; /* Centrar verticalmente */
+  align-items: center; /* Centrar horizontalmente */
+  gap: 20px; /* Separación entre la tarjeta y la pila */
+  width: 100%; /* Ocupa el ancho completo */
+  height: calc(100vh - 60px); /* Altura dinámica menos el espacio del header */
+  margin-top: 20px;
+}
+
+/* Estilos para las tarjetas de contenido */
+.card {
+  width: 100%;
+  max-width: 400px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Título de las tarjetas */
+.cardTitle {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Estilo para los botones */
+.calc-btn {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.calc-btn:hover {
+  background-color: #45a049;
+}
+
+.calc-btn:active {
+  transform: scale(0.95);
+}
+
+/* Contenedor visual de la pila */
+.stack-visual-container {
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column-reverse; /* Apilar desde abajo */
+  align-items: center; /* Centrar horizontalmente */
+  justify-content: flex-start; /* Alinear elementos en la parte superior */
+  gap: 5px; /* Separación entre los elementos */
+}
+
+/* Elementos individuales de la pila */
+.stack-visual-container div {
+  background-color: rgba(210, 159, 30, 0.1);
+  padding: 10px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+  width: 90%;
+  margin: 5px 0;
+  transition: background-color 0.3s ease;
+}
+
+.stack-visual-container div:hover {
+  background-color: rgba(210, 159, 30, 0.25);
+}

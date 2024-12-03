@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javascript</title>
+  <link href="./img/favicon.ico" rel="icon" type="image/x-icon">
+  <link href="./css/styles.css" rel="stylesheet" type="text/css" />
+  <!-- indexedDB.js primero -->
+  <script defer src="../js/indexedDB.js"></script>
+
+  <!-- Los demás scripts en el orden necesario -->
+  <script defer src="./js/loadExercise.js"></script>
+  <script defer src="./js/deleteIndexedDB.js"></script>
+  <script defer src="./js/script.js"></script>
+</head>
+
+<body>
+  <!-- --------HEADER---------- -->
+  <div class="header">
+    <h3>Ejemplos – FUNDAMENTOS DE JS (ES6)</h3>
+    <h4>Desarrollo WEB en entorno cliente</h4>
+    <h5>Login + Cookies + NUMBER</h5>
+  </div>
+  <!-- ---------MENU----------- -->
+  <div id="topnav">
+    <a href="https://www.w3schools.com/js/default.asp">w3schools</a>
+    <a href="https://es.javascript.info/js">javascript.info</a>
+    <a href="https://developer.mozilla.org/es/docs/Web/JavaScript">MDN</a>
+    <a href="https://github.com/jgarmay674/Plantilla03.git">GitHub</a>
+    <div class="dropdown">
+      <button class="dropbtn">NUMBER</button>
+      <div class="dropdown-content">
+        <a href="#" id="mini-calculadora">Mini Calculadora</a>
+        <a href="#" id="cambios-de-base">Cambios de Base</a>
+        <a href="#" id="calculadora">Calculadora</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">STRING</button>
+      <div class="dropdown-content">
+        <a href="#" id="modificar-texto">Modificar texto</a>
+        <a href="#" id="modificar-texto-api">Modificar texto - API</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">ARRAY</button>
+      <div class="dropdown-content">
+        <a href="#" id="genera-matrices">Genera Matrices</a>
+        <a href="#" id="genera-matrices-aleatorio">Genera Matrices Aleatoriamente</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">ALMACENA</button>
+      <div class="dropdown-content">
+        <a href="#" id="cookie">Cookie</a>
+      </div>
+    </div>
+    <a href="#" id="logoutButton">Cerrar Sesión</a>
+  </div>
+  <br />
+  <!-- ------MAIN-CONTENT------ -->
+  <div class="container">
+    <!-- Contenido Principal (Lista de Ejercicios envueltas en un div que ocultamos y mostramos) -->
+    <div id="mainContent">
+      <p>Selecciona una opción del menú para ver los ejercicios.</p>
+    </div>
+  </div>
+  <br />
+  <!-- ---------FOOT----------- -->
+  <div class="footer">
+    © Luis José Sánchez & José García ☺
+  </div>
+</body>
+
+</html>

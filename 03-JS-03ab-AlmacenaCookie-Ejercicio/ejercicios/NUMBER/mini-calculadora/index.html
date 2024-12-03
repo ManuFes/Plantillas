@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini calculadora</title>
+  <link href="./img/favicon.ico" rel="icon" type="image/x-icon" >
+  <link href="./css/styles.css" rel="stylesheet" type="text/css" />
+  <script defer type="text/javascript" src="./js/script.js"></script>
+</head>
+
+<body>
+  <!-- --------HEADER---------- -->
+  <div class="header">
+    <h3>Ejemplos – FUNDAMENTOS DE JS (ES6)</h3>
+    <h4>Desarrollo WEB en entorno cliente</h4>
+    <h5>Login + Cookies + NUMBER</h5>
+  </div>
+  <!-- ---------MENU----------- -->
+  <div id="topnav">
+    <a href="https://www.w3schools.com/js/default.asp">w3schools</a>
+    <a href="https://es.javascript.info/js">javascript.info</a>
+    <a href="https://developer.mozilla.org/es/docs/Web/JavaScript">MDN</a>
+    <a href="https://github.com/jgarmay674/Plantilla03.git">GitHub</a>
+  </div>
+  <br />
+  <!-- ------MAIN-CONTENT------ -->
+  <div class="container">
+    <div class="card">
+      <div class="cardTitle">Mini calculadora</div>
+      <div class="cardBody">
+        <form action="">
+          <fieldset>
+            <legend>Operaciones:</legend>
+            <label for="op1">Operando 1:</label>
+            <input id="op1" type="text" name="op1">&nbsp;&nbsp;
+            <label for="op2">Operando 2: </label>
+            <input id="op2" type="text" name="op2"><br><br>
+  
+            <input id="sumar" type="button" name="sumar" value="+">&nbsp;&nbsp;
+            <input id="restar" type="button" name="restar" value="-">&nbsp;&nbsp;
+            <input id="multiplicar" type="button" name="multiplicar" value="*">&nbsp;&nbsp;
+            <input id="dividir" type="button" name="dividir" value="/">&nbsp;&nbsp;
+            <input id="entera" type="button" name="entera" value="_.">&nbsp;&nbsp;
+            <input id="decimal" type="button" name="decimal" value="._">&nbsp;&nbsp;
+            <input id="factorial" type="button" name="factorial" value="!">
+          </fieldset>
+        </form>
+        <p><span id="texto"></span><strong id="resultado"></strong></p>
+      </div>
+      <div class="cardFooter"><a href="../../index.html">&gt;&gt; Página principal</a></div>
+    </div>
+  </div>
+  <br />
+  <!-- ---------FOOT----------- -->
+  <div class="footer">
+    © Luis José Sánchez & José García (jota) ☺
+  </div>
+</body>
+
+</html>
